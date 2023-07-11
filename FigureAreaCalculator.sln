@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FigureAreaCalculator", "FigureAreaCalculator\FigureAreaCalculator.csproj", "{8D8A5011-E5D2-4D94-8FB1-7F0911A9385F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FigureAreaCalculatorClient", "FigureAreaCalculatorClient\FigureAreaCalculatorClient.csproj", "{018448D7-7403-4FC3-B50D-1C9655232DC4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FigureAreaCalculatorTests", "FigureAreaCalculatorTests\FigureAreaCalculatorTests.csproj", "{D678F9F1-6FA5-436B-8019-2BAAE0101A73}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8D8A5011-E5D2-4D94-8FB1-7F0911A9385F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D8A5011-E5D2-4D94-8FB1-7F0911A9385F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D8A5011-E5D2-4D94-8FB1-7F0911A9385F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D8A5011-E5D2-4D94-8FB1-7F0911A9385F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{018448D7-7403-4FC3-B50D-1C9655232DC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{018448D7-7403-4FC3-B50D-1C9655232DC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{018448D7-7403-4FC3-B50D-1C9655232DC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{018448D7-7403-4FC3-B50D-1C9655232DC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D678F9F1-6FA5-436B-8019-2BAAE0101A73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D678F9F1-6FA5-436B-8019-2BAAE0101A73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D678F9F1-6FA5-436B-8019-2BAAE0101A73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D678F9F1-6FA5-436B-8019-2BAAE0101A73}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {57D87DE3-6767-429D-A430-59556BBC9F8B}
+	EndGlobalSection
+EndGlobal
