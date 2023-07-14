@@ -1,5 +1,4 @@
 ﻿using FigureAreaCalculator.Models;
-using FigureAreaCalculator.Services;
 using System;
 
 namespace FigureAreaCalculatorClient
@@ -12,17 +11,13 @@ namespace FigureAreaCalculatorClient
 
             int figureType = Convert.ToInt32(Console.ReadLine());
 
-            IFigure figure;
-
             if (figureType == 1)
             {
                 Console.Write("Enter radius of the circle:\n");
                 double radius = Convert.ToDouble(Console.ReadLine());
+                IFigure circle = new Circle(radius);
 
-                double[] factoryParameters = { radius };
-                figure = FigureFactory.CreateShape(figureType, factoryParameters);
-
-                double area = Math.Round(figure.CalculateArea(), 5);
+                double area = Math.Round(circle.CalculateArea(), 5);
                 Console.WriteLine($"Calculated area of the circle is {area}");
             }
             else if (figureType == 2)
@@ -32,10 +27,9 @@ namespace FigureAreaCalculatorClient
                 double b = Convert.ToDouble(Console.ReadLine());
                 double c = Convert.ToDouble(Console.ReadLine());
 
-                double[] factoryParameters = { a, b, c };
-                figure = FigureFactory.CreateShape(figureType, factoryParameters);
+                IFigure triangle = new Triangle(a, b, c);
 
-                double area = Math.Round(figure.CalculateArea(), 5);
+                double area = Math.Round(triangle.CalculateArea(), 5);
                 Console.WriteLine($"Calculated area of the triangle is {area}");
             }
             else

@@ -11,7 +11,7 @@ namespace FigureAreaCalculator.Models
         {
             if (radius <= 0)
             {
-                throw new ArgumentException("Radius must be greater than 0", nameof(radius));
+                throw new ArgumentException("Radius must be greater than 0.", nameof(radius));
             }
 
             Radius = radius;

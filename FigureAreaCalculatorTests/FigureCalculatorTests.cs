@@ -1,7 +1,5 @@
 using FigureAreaCalculator.Models;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NUnit.Framework;
-using System;
 using Assert = Microsoft.VisualStudio.TestTools.UnitTesting.Assert;
 
 namespace FigureAreaCalculatorTests
@@ -27,6 +25,17 @@ namespace FigureAreaCalculatorTests
             Assert.AreEqual(area, 78.53982);
         }
 
+        [Test]
+        public void GetCircleArea_InvalidRadius_ThrowsArgumentException()
+        {
+            //arrange
+            double radius = -5;
+
+            // assert
+            Assert.ThrowsException<ArgumentException>(() => {
+                Circle circle = new Circle(radius);
+            }, "Radius must be greater than 0.");
+        }
         [Test]
         public void GetTriangleArea_ValidSides_ReturnsCorrectArea()
         {
@@ -54,7 +63,7 @@ namespace FigureAreaCalculatorTests
         }
 
         [Test]
-        public void CheckIsTriangleRectangular_IncorrectRatioOfSides_ReturnsTrue()
+        public void CheckIsTriangleRectangular_IncorrectRatioOfSides_ReturnsFalse()
         {
             //arrange
             Triangle triangle = new Triangle(3, 3, 5);
@@ -78,8 +87,22 @@ namespace FigureAreaCalculatorTests
             // assert
             Assert.ThrowsException<ArgumentException>(() => {
                 Triangle triangle = new Triangle(side1, side2, side3);
-            }, "Triangle sides must be greater than 0");
+            }, "Triangle sides must be greater than zero.");
         }
 
+        [Test]
+        [ExpectedException(typeof(ArgumentException))]
+        public void CreateTriangleObject_IsTriangleInequalityNotSatisfied_ThrowsArgumentException()
+        {
+            // arrange
+            double side1 = 1;
+            double side2 = 1;
+            double side3 = 10;
+
+            // assert
+            Assert.ThrowsException<ArgumentException>(() => {
+                new Triangle(side1, side2, side3);
+            }, "Triangle inequality is not satisfied.");
+        }
     }
 }

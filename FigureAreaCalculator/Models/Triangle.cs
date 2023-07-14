@@ -15,14 +15,11 @@ namespace FigureAreaCalculator.Models
                 _b = b;
                 _c = c;
             }
-            else
-            {
-                throw new ArgumentException("Triangle sides must be greater than 0");
-            }
         }
         public double CalculateArea()
         {
             double halfP = (_a + _b + _c) / 2;
+
 
             return Math.Sqrt(halfP * (halfP - _a) * (halfP - _b) * (halfP - _c));
         }
@@ -41,11 +38,15 @@ namespace FigureAreaCalculator.Models
 
             if (a <= 0 || b <= 0 || c <= 0)
             {
-                return false;
+                throw new ArgumentException("Triangle sides must be greater than zero.");
+            }
+
+            if (a + b <= c || a + c <= b || b + c <= a)
+            {
+                throw new ArgumentException("Triangle inequality is not satisfied.");
             }
 
             return true;
-
         }
     }
 
