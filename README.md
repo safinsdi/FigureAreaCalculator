@@ -13,4 +13,4 @@ Product: | ProductID | ProductName |
 
 Category: | CategoryID | CategoryName |
 
-Compliance: | ProductID | CategoryID |
+Compliance: |CompianceID| ProductID | CategoryID |
